@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import { LoginForm } from "../components/login/LoginForm";
 import { LoginLogo } from "../components/login/LoginLogo";
+import { SignupForm } from "../components/login/SignupForm";
 
-export const LoginPage = () => {
+export const SignupPage = () => {
   return (
     <Container>
-      <LoginForm />
       <LoginLogo />
+      <SignupForm />
     </Container>
   );
 };
@@ -16,8 +16,5 @@ const Container = styled.div`
   padding: 20px;
   height: 100vh;
   gap: 10px;
-  @media (max-width: 425px) {
-    height: auto;
-    flex-direction: column-reverse;
-  }
+  background-color: aqua;
 `;
