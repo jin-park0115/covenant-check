@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const LoginForm = () => {
   return (
     <Form>
-      <Title>covenant</Title>
+      <Title className="text-3xl">covenant</Title>
       <Subtitle>
         영혼을 살리고 <br /> 세우는 공동체
       </Subtitle>
@@ -67,7 +67,7 @@ const ForgotPassword = styled(Link)`
 `;
 const ButtonGroup = styled.div`
   display: flex;
-  gap: 10px;
+  gap: 5px;
 `;
 
 const SignBtn = styled(Link)`
