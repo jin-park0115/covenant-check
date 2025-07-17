@@ -16,5 +16,4 @@ const Container = styled.div`
   padding: 20px;
   height: 100vh;
   gap: 10px;
-  background-color: aqua;
 `;

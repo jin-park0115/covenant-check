@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 type FormValues = {
@@ -30,7 +31,9 @@ export const SignupForm = () => {
         <Title>Sign up</Title>
         <SubTitle>
           <p className="text-sm">이미 회원이신가요?</p>
-          <p className="text-xs">로그인 페이지로 가기</p>
+          <Link to={"/"} className="text-xs text-teal-700">
+            로그인 페이지로 가기
+          </Link>
         </SubTitle>
       </TitleWrap>
       <Form onSubmit={handleSubmit(onSubmit)}>
@@ -52,7 +55,7 @@ export const SignupForm = () => {
             {...register("cell", {
               required: "셀 정보는 필수입니다.",
             })}
-            placeholder="소속된 셀"
+            placeholder="소속된 셀 숫자만 적어주세요."
           />
           {errors.cell && <ErrorMsg>{errors.cell.message}</ErrorMsg>}
         </Label>
@@ -116,9 +119,11 @@ export const SignupForm = () => {
 };
 const Wrap = styled.div`
   width: 50%;
-  background-color: beige;
   display: flex;
   flex-direction: column;
+  @media (max-width: 425px) {
+    width: auto;
+  }
 `;
 
 const TitleWrap = styled.div`
